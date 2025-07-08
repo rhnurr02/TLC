@@ -1,4 +1,4 @@
-# Trade/Buy Calculator
+# TLC (Twinleaf Calculator) a Trade/Buy Calculator
 
 A streamlined, interactive calculator designed for collectible card game vendors and traders. This tool enables fast, accurate trade or buy evaluations using customizable percentages. The app is fully responsive and built for practical, real-world usage at events, vendor booths, and casual meetups.
 
