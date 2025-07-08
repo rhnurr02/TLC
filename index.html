@@ -1,0 +1,72 @@
+<!--
+  Author: Raihan Nurrahman
+  Description: Main HTML layout for Trade/Buy Calculator
+  Date: 07-08/2025
+-->
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trade/Buy Calculator</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Import Nunito font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app-container">
+    <!-- Customer input section -->
+    <div id="customer-section" class="side-section">
+      <h2>Customer Side</h2>
+      <div class="card-list-wrapper">
+        <!-- Container for dynamically added customer card values -->
+        <div id="customer-cards" class="card-list"></div>
+        <button id="add-customer-card" onclick="addCard('customer')">Add Card</button>
+      </div>
+    </div>
+
+    <!-- Middle section contains mode selection and percentage input -->
+    <div id="middle-section">
+      <div id="mode-and-percent">
+        <div id="mode-toggle">
+          <!-- Radio buttons to toggle between trade and buy mode -->
+          <label><input type="radio" name="mode" value="trade" checked onchange="switchMode()" /> Trade</label>
+          <label><input type="radio" name="mode" value="buy" onchange="switchMode()" /> Buy</label>
+        </div>
+        <div id="percentage-container">
+          <!-- Input for customizing the percentage used in calculations -->
+          <label for="percentage-input">Percentage (%)</label>
+          <input
+            type="number"
+            id="percentage-input"
+            value="80"
+            min="0"
+            max="100"
+            oninput="updateCalculation()"
+          />
+        </div>
+      </div>
+      <!-- Result display area -->
+      <div id="result"></div>
+    </div>
+
+    <!-- Reset button clears all inputs and resets settings -->
+    <button id="reset-btn" onclick="resetApp()">Reset</button>
+
+    <!-- Seller input section -->
+    <div id="seller-section" class="side-section">
+      <h2>Seller Side</h2>
+      <div class="card-list-wrapper">
+        <!-- Container for dynamically added seller card values -->
+        <div id="seller-cards" class="card-list"></div>
+        <button id="add-seller-card" onclick="addCard('seller')">Add Card</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to main JavaScript functionality -->
+  <script src="script.js"></script>
+</body>
+</html>
