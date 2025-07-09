@@ -25,7 +25,8 @@ function addCard(side) {
   cardWrapper.style.alignItems = "center";
   cardWrapper.style.gap = "5px";
 
-  // Create a clickable × symbol to remove the card entry  const deleteBtn = document.createElement("span");
+  // Create a clickable × symbol to remove the card entry  
+  const deleteBtn = document.createElement("span");
   deleteBtn.className = "remove-btn";
   deleteBtn.innerHTML = "&times;";
   deleteBtn.title = "Remove card";
