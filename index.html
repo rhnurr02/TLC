@@ -1,7 +1,7 @@
 <!--
   Author: Raihan Nurrahman
   Description: Main HTML layout for Trade/Buy Calculator
-  Date: 07-08/2025
+  Date: 07-08-2025
 -->
   
 <!DOCTYPE html>
@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="style.css" />
   <!-- Import Nunito font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Added for PWA support -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a84ff">
 </head>
 <body>
   <div id="app-container">
@@ -67,6 +70,18 @@
   </div>
 
   <!-- Link to main JavaScript functionality -->
-  <script src="script.js"></script>
+    <script src="script.js"></script>
+
+  <!-- Register service worker for offline support -->
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker registered:', reg))
+        .catch(err => console.error('Service Worker registration failed:', err));
+    });
+  }
+  </script>
+
 </body>
 </html>

@@ -122,3 +122,8 @@ function resetApp() {
 // Initialize the calculator when the page loads
 switchMode();
 updateCalculation();
+window.addCard = addCard;
+window.switchMode = switchMode;
+window.updateCalculation = updateCalculation;
+window.resetApp = resetApp;
+
