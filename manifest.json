@@ -2,22 +2,21 @@
   "name": "Twinleaf Calculator",
   "short_name": "TLC",
   "description": "Quick and easy buy/sell/trade calculator for vendors/buyers",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/TLC/",
+  "scope": "/TLC/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#0a84ff",
-  "categories": ["business", "utilities"],
   "icons": [
     {
-      "src": "/icons/tlc-logo-192.png",
+      "src": "/TLC/icons/tlc-logo-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/tlc-logo-512.png",
+      "src": "/TLC/icons/tlc-logo-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
